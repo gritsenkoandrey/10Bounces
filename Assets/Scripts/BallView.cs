@@ -1,6 +1,9 @@
 ﻿namespace Assets.Scripts
 {
-    public sealed class BallView : BounceElement
+    /// <summary>
+    /// Describes the Ball view and its features.
+    /// </summary>
+    public class BallView : BounceElement
     {
         /// <summary>
         /// Only this is necessary. Physics is doing the rest of work.
@@ -8,7 +11,8 @@
         /// </summary>
         private void OnCollisionEnter()
         {
-            Application.controller.OnBallGroundHit();
+            //Application.controller.OnBallGroundHit();
+            Application.Nitify(BounceNotification.BallHitGround, this);
         }
     }
 }

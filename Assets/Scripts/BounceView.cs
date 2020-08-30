@@ -3,7 +3,7 @@
     /// <summary>
     /// Contains all views related to the app.
     /// </summary>
-    public sealed class BounceView : BounceElement
+    public class BounceView : BounceElement
     {
         /// <summary>
         /// Reference to the ball.

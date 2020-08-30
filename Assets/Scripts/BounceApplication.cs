@@ -18,4 +18,28 @@ public class BounceApplication : MonoBehaviour
     private void Start()
     {
     }
+
+    /// <summary>
+    /// Iterates all Controllers and delegates the notification data
+    /// This method can easily be found because every class is 
+    /// "BounceElement" and has an "app" instance.
+    /// </summary>
+    public void Nitify(string pEventPath, Object pTarget, params object[] pData)
+    {
+        controller.OnNotification(pEventPath, pTarget, pData);
+
+        //BounceController[] controllerList = GetAllControllers();
+        //foreach (var controller in controllerList)
+        //{
+        //    controller.OnNotification(pEventPath, pTarget, pData);
+        //}
+    }
+
+    /// <summary>
+    /// Fetches all scene Controllers.
+    /// </summary>
+    //public BounceController[] GetAllControllers()
+    //{
+    //    return new BounceController[0];
+    //}
 }
